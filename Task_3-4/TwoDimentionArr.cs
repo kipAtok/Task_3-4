@@ -1,8 +1,10 @@
-﻿internal class OneDimentionArr<T>: ArrBase<T>
-{
-    private T[] _myArr;
+using System;
 
-    public OneDimentionArr(bool userFill = false)
+class TwoDimentionArr<T>: ArrBase<T>
+{
+    private T[,] _myArr;
+
+    public TwoDimentionArr(bool userFill = false)
     {
         FillArr(userFill);
     }

@@ -6,14 +6,11 @@ abstract class ArrBase<T>: IArrBase<T>
     {
         if (userFill)
         {
-            if (userFill)
-            {
-                ManualFill();
-            }
-            else
-            {
-                AutoFill();
-            }
+            ManualFill();
+        }
+        else
+        {
+            AutoFill();
         }
     }
 
