@@ -1,19 +1,21 @@
-﻿internal class OneDimentionArr<T>: ArrBase<T>
+﻿class OneDimentionArr<T>: ArrBase<T>
 {
     private T[] _myArr;
 
-    public OneDimentionArr(bool userFill = false)
+    public OneDimentionArr(int length = 3)
     {
-        FillArr(userFill);
+        
     }
 
-    public override void Print()
+    public T this[int index]
     {
-        Console.WriteLine("Your array: ");
-        foreach (T i in _myArr)
+        get
         {
-            Console.Write(i + " ");
+            return _myArr[index];
         }
-        Console.WriteLine();
+        set
+        {
+            _myArr[index] = value;
+        }
     }
 }

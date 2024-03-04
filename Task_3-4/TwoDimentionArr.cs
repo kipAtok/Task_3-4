@@ -4,18 +4,20 @@ class TwoDimentionArr<T>: ArrBase<T>
 {
     private T[,] _myArr;
 
-    public TwoDimentionArr(bool userFill = false)
+    public TwoDimentionArr()
     {
-        FillArr(userFill);
+        
     }
 
-    public override void Print()
+    public T this[int index1, int index2]
     {
-        Console.WriteLine("Your array: ");
-        foreach (T i in _myArr)
+        get
         {
-            Console.Write(i + " ");
+            return _myArr[index1, index2];
         }
-        Console.WriteLine();
+        set
+        {
+            _myArr[index1, index2] = value;
+        }
     }
 }
