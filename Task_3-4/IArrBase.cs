@@ -1,7 +1,7 @@
 ﻿using System;
 
-interface IArrBase<T>: IPrinter
+interface IArrBase: IPrinter
 {
-    public void FillArr(bool userFill);
+    public void FillArr(bool userFill = false);
 }
 

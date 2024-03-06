@@ -1,13 +1,20 @@
 using System;
 
-static class GenString
+class GenString: IGen<string>
 {
-    public static string GenRandom()
+    public string GenRandom()
     {
-        return "random";
+        var rnd  = new Random();
+        string letters = "abcdefghijklmnopqrstuvwxyz";
+        string word = "";
+        for (int i = 0; i < rnd.Next(5, 10); i++)
+        {
+            word += letters[rnd.Next(letters.Length)];
+        }
+        return word;
     }
-    public static string GenManual()
+    public string GenManual()
     {
-        return "manual";
+        return Console.ReadLine();
     }
 }

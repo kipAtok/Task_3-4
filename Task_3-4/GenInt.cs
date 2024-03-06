@@ -1,14 +1,14 @@
 using System;
 
-static class GenInt
+class GenInt: IGen<int>
 {
-    static public int GenRandom()
+    public int GenRandom()
     {
         var rnd = new Random();
         return rnd.Next(1, 10);
     }
 
-    static public int GenManual()
+    public int GenManual()
     {
         return int.Parse(Console.ReadLine());
     }

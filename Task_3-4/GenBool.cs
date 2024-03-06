@@ -1,13 +1,16 @@
 using System;
 
-static class GenBool
+class GenBool: IGen<bool>
 {
-    public static bool GenRandom()
+    public bool GenRandom()
     {
-        return false;
+        var rnd = new Random();
+        return rnd.Next() % 2 == 0;
     }
-    public static bool GenManual()
+    public bool GenManual()
     {
-        return true;
+        Console.Write("Choose: 1 - true; 0  - false: ");
+        string input = Console.ReadLine();
+        return input == "1";
     }
 }

@@ -1,8 +1,8 @@
 ﻿using System;
 
-abstract class ArrBase<T>: IArrBase<T>
+abstract class ArrBase: IArrBase
 {
-    public virtual void FillArr(bool userFill)
+    public virtual void FillArr(bool userFill = false)
     {
         if (userFill)
         {
@@ -10,7 +10,7 @@ abstract class ArrBase<T>: IArrBase<T>
         }
         else
         {
-            AutoFill();
+            RandomFill();
         }
     }
 
@@ -18,5 +18,5 @@ abstract class ArrBase<T>: IArrBase<T>
 
     protected abstract void ManualFill();
 
-    protected abstract void AutoFill();
+    protected abstract void RandomFill();
 }
